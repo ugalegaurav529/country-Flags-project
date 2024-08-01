@@ -23,7 +23,7 @@ const Countries = () => {
       {countries?.map((item) => {
         return (
           <div className="card-container">
-            <img src={item?.flags?.svg} alt="countryImage" className="image" />
+            <img src={item?.flags?.svg} alt="country-Image" className="image" />
             <p className="para">{item?.name?.common}</p>
           </div>
         );
