@@ -6,7 +6,7 @@ const Countries = () => {
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        const response = await fetch("https://xcountries-backend.azurewebsites.net/all");
+        const response = await fetch("https://restcountries.com/v3.1/all");
         const data = await response.json();
         console.log("data", data);
         setCountries(data);
@@ -23,7 +23,7 @@ const Countries = () => {
       {countries?.map((item) => {
         return (
           <div className="card-container">
-            <img src={item?.flags?.svg} alt="country-Image" className="image" />
+            <img src={item?.flags?.svg} alt="" className="image" />
             <p className="para">{item?.name?.common}</p>
           </div>
         );
