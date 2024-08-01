@@ -6,7 +6,7 @@ const Countries = () => {
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        const response = await fetch("https://restcountries.com/v3.1/all");
+        const response = await fetch("https://xcountries-backend.azurewebsites.net/all");
         const data = await response.json();
         console.log("data", data);
         setCountries(data);
